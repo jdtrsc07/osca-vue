@@ -30,18 +30,20 @@
   
           // Assuming the API response structure is similar to your example
           const accessToken = response.data.access_token;
-          
+  
           // Save the token to your state, local storage, or vuex store
           // For simplicity, let's save it to the local storage
           localStorage.setItem('access_token', accessToken);
   
-          // Log the token to the console for testing
-          console.log('Access Token:', accessToken);
-  
           // Redirect the user to another page or perform any other action
           // after successful login
         } catch (error) {
-          console.error('Login error:', error);
+          // Check if the error status is 422 (Unprocessable Entity)
+          if (error.response && error.response.status === 422) {
+            console.error('Login error: Incorrect Credentials');
+          } else {
+            console.error('Login error:', error);
+          }
         }
       },
     },
