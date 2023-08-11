@@ -1,19 +1,13 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
+// import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import { StreamBarcodeReader } from "vue-barcode-reader"
 
-const onDecode = (text) => {
-  console.log(`Decode text from QR code is ${text}`);
-};
 
-const onLoaded = () => {
-  console.log(`Ready to start scanning barcodes`);
-};
+
 
 </script>
 
@@ -93,5 +87,4 @@ const onLoaded = () => {
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
 
-  <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
 </template>
