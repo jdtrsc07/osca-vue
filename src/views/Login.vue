@@ -41,9 +41,10 @@
           // Check if the error status is 422 (Unprocessable Entity)
           if (error.response && error.response.status === 422) {
             console.error('Login error: Incorrect Credentials');
-          } else {
-            console.error('Login error:', error);
-          }
+          } 
+        //   else {
+        //     console.error('Login error:', error);
+        //   }
         }
       },
     },
