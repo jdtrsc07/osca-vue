@@ -34,7 +34,7 @@
           // Save the token to your state, local storage, or vuex store
           // For simplicity, let's save it to the local storage
           localStorage.setItem('access_token', accessToken);
-  
+          console.log('Access Token:', accessToken);
           // Redirect the user to another page or perform any other action
           // after successful login
         } catch (error) {
